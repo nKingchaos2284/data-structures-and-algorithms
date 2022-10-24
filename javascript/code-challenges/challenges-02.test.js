@@ -24,19 +24,34 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+<<<<<<< HEAD
   return arr.map(n=>n + 1);
+=======
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 
+  let newArr = arr.map(element => element + 1);
+  return newArr;
 };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
+<<<<<<< HEAD
 
   return arr.map(n=>n + '?');
 
+=======
+  let newArr = arr.map(element => element + '?');
+  return newArr;
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,6 +66,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
     expect(forLoopTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);*/
 
 const forLoopTwoToThe = (arr) => {
+<<<<<<< HEAD
   let arr2 = [];
   for(let i = 0; i < arr.length; i++){
 arr2.push(Math.pow(2,arr[i]));
@@ -58,31 +74,49 @@ arr2.push(Math.pow(2,arr[i]));
 return arr2;
   //return arr.map(n=>n * n)
 
+=======
+  let num =[];
+  for(const element of arr){
+    num.push(Math.pow(2, element));
+  }
+  return num;
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
-
 const forEachTwoToThe = (arr) => {
+<<<<<<< HEAD
   let arr2 = [];
   arr.forEach(num => {
     arr2.push(Math.pow(2,num));
   })
 return arr2;
 
+=======
+  let num = [];
+  arr.forEach(element => {
+    num.push(Math.pow(2, element));
+  });
+  return num;
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4 and your forEachTwoToThe function from challenge 5, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
+<<<<<<< HEAD
 
   return arr.map(n=>Math.pow(2,n))
 
+=======
+  let newArr = arr.map(element => Math.pow(2, element));
+  return newArr;
+>>>>>>> 62109b0620a2ff17bc5f072bcae7e98f7449bb6f
 };
 
 /* ------------------------------------------------------------------------------------------------

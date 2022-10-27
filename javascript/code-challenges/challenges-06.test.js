@@ -23,9 +23,12 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  return arr.map(item => {
-    return item.name.split('').reverse().join('');
-  });
+  return arr.map((idx) => {
+let eachName = idx.name.split('');
+let reverseName = eachName.reverse();
+return reverseName.join('');
+  }
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +39,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  return str + ' The end.';
+  let str2 = str + ' The end.';
+  return str2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +57,13 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  arr.push(arr[0]);
+  //arr + arr.slice(0,0);
+  //arr + arr.indexOf(0);
+  // next
+  // let realAppend = [...arr];
+  // realAppend.push(arr[0]);
+  let realAppend = arr[0];
+  arr.push(realAppend);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,7 +99,9 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  people.forEach(person => person.isAuthor = true);
+  people.forEach(person => {
+    person.isAuthor = true;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +120,10 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  arr1.push(...arr2);
+  arr2.forEach(value => {
+    arr1.push(value);
+  })
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,7 +139,7 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });

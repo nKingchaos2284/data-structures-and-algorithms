@@ -2,9 +2,7 @@
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
-
 Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
-
 For example:
 [
 {
@@ -18,7 +16,6 @@ For example:
   shoeSize: 8
 }
 ]
-
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
@@ -33,9 +30,7 @@ return reverseName.join('');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
-
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
-
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
@@ -45,11 +40,8 @@ const appendTheEnd = (str) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-
 Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
-
 Do not use a return statement.
-
 For example:
 const a = [1, 2, 3];
 appendFirstToLast(a);
@@ -68,13 +60,9 @@ const appendFirstToLast = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-
 Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
-
 The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
-
 Do not use a return statement.
-
 For example:
 const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
@@ -87,11 +75,8 @@ const addBirthYearProperty = (obj, year) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
-
 Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
-
 The function should modify the object in place. Do not use a return statement.
-
 For example:
 const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
 setStatusAsAuthor(people);
@@ -106,12 +91,9 @@ const setStatusAsAuthor = (people) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
-
 Write a function that accepts two arrays. Append the values from the second array into the first,
 maintaining the ordering.
-
 The function should modify the first array in place. Do not use a return statement.
-
 For example:
 const a = [1, 2]; NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
 const b = [3, 4];
@@ -128,13 +110,9 @@ const append = (arr1, arr2) => {
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
-
 All the code below will verify that your functions are working to solve the challenges.
-
 DO NOT CHANGE any of the below code.
-
 Run your tests from the console: jest challenges-02.test.js
-
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
